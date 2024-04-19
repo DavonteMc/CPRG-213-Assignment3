@@ -87,6 +87,9 @@ clear.addEventListener('click', function() {
     function clearALL(day) {
         day.classList.remove("clicked");
     }
+    fullRate.classList.add("clicked");
+    halfRate.classList.remove("clicked");
+    dailyRate = 35;
     dayCounter = 0;
     calculate();
 });
