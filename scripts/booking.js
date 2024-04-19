@@ -28,10 +28,10 @@ monday.addEventListener('click', function() {
     const clicked = this.classList.toggle('clicked');
     if (clicked) {
         dayCounter += 1;
-        calculate()
+        calculate();
     } else {
         dayCounter -= 1;
-        calculate()
+        calculate();
     }
 });
 
@@ -39,10 +39,10 @@ tuesday.addEventListener('click', function() {
     const clicked = this.classList.toggle('clicked');
     if (clicked) {
         dayCounter += 1;
-        calculate()
+        calculate();
     } else {
         dayCounter -= 1;
-        calculate()
+        calculate();
     }
 });
 
@@ -50,10 +50,10 @@ wednesday.addEventListener('click', function() {
     const clicked = this.classList.toggle('clicked');
     if (clicked) {
         dayCounter += 1;
-        calculate()
+        calculate();
     } else {
         dayCounter -= 1;
-        calculate()
+        calculate();
     }
 });
 
@@ -61,10 +61,10 @@ thursday.addEventListener('click', function() {
     const clicked = this.classList.toggle('clicked');
     if (clicked) {
         dayCounter += 1;
-        calculate()
+        calculate();
     } else {
         dayCounter -= 1;
-        calculate()
+        calculate();
     }
 });
 
@@ -72,10 +72,10 @@ friday.addEventListener('click', function() {
     const clicked = this.classList.toggle('clicked');
     if (clicked) {
         dayCounter += 1;
-        calculate()
+        calculate();
     } else {
         dayCounter -= 1;
-        calculate()
+        calculate();
     }
 });
 
@@ -87,8 +87,8 @@ clear.addEventListener('click', function() {
     function clearALL(day) {
         day.classList.remove("clicked");
     }
-    dayCounter = 0
-    calculate()
+    dayCounter = 0;
+    calculate();
 });
 
 
@@ -99,7 +99,7 @@ halfRate.addEventListener('click', function() {
     dailyRate = 20;
     halfRate.classList.add("clicked");
     fullRate.classList.remove("clicked");
-    calculate()
+    calculate();
 });
 
 
@@ -109,7 +109,7 @@ fullRate.addEventListener('click', function() {
     dailyRate = 35;
     fullRate.classList.add("clicked");
     halfRate.classList.remove("clicked");
-    calculate()
+    calculate();
 });
 
 
@@ -117,6 +117,6 @@ fullRate.addEventListener('click', function() {
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
 function calculate() {
-    weeklyTotal = dailyRate * dayCounter
-    document.getElementById('calculated-cost').innerHTML = weeklyTotal
+    const weeklyTotal = dailyRate * dayCounter;
+    document.getElementById('calculated-cost').innerHTML = weeklyTotal;
 }
